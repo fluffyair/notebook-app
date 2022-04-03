@@ -1,5 +1,6 @@
 showNotes()
 
+
 function delNote(btn) {
 
         let parent = btn.parentElement.parentElement
@@ -35,6 +36,8 @@ function delNote(btn) {
 
 function showNotes() {
     let noteObj = localStorage.getItem('notes') || [];
+
+	if(!noteObj || !noteObj[0]) localStorage.setItem('notes', JSON.stringify(noteObj))
 
     let html = '';
     let obj = [];
