@@ -6,20 +6,20 @@ checkbtn.addEventListener('click', function() {
 
 
     
-     
+    let html = '';
     const toast = document.querySelector('.toast')
 
     toast.classList.add('active');
     let noteObj = localStorage.getItem('notes') || [];
 
     let noter = [{ title: title, description: desc }];
-    let html = `<section><h1>${title} (0)</h1><p>${desc}</p><button onclick="delNote(this)" class="trash"><i class="fa-solid fa-trash"></i></button></section>`;
+    html += `<section><h1>${title} (0)</h1><p>${desc}</p><div class='menuTrack'> <button onclick="delNote(this)" class="trash"><i class="fa-solid fa-trash"></i></button><button onclick="download(this.parentElement.parentElement.querySelector('h1').innerHTML, this.parentElement.parentElement.querySelector('p').innerHTML)" class="download"><i class="fa-solid fa-cloud-arrow-down"></i></button></div></section>`
     var ob2 = JSON.parse(noteObj);
 
 
     for (let i = 0; i < ob2.length; i++) {
 
-        html += `<section><h1>${ob2[i].title + ` (${i + 1})`}</h1><p>${ob2[i].description}</p><button onclick="delNote(this)" class="trash"><i class="fa-solid fa-trash"></i></button></section>`
+        html += `<section><h1>${ob2[i].title + ` (${i})`}</h1><p>${ob2[i].description}</p><div class='menuTrack'> <button onclick="delNote(this)" class="trash"><i class="fa-solid fa-trash"></i></button><button onclick="download(this.parentElement.parentElement.querySelector('h1').innerHTML, this.parentElement.parentElement.querySelector('p').innerHTML)" class="download"><i class="fa-solid fa-cloud-arrow-down"></i></button></div></section>`
 
         noter.push({ title: ob2[i].title, description: ob2[i].description })
 

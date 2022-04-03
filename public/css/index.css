@@ -101,18 +101,47 @@ section:hover {
 }
 
 .trash {
-    position: absolute;
+    font-size: 25px;
     right: -10px;
     background-color: var(--white);
     border: none;
     border-radius: 50%;
-    padding: 0.4rem;
+    padding: 0.2rem;
+    padding-right: 0.4rem;
     color: inherit;
 }
 
 .trash:hover {
     color: var(--red);
     transition: color 0.2s ease-in-out;
+}
+
+.download {
+    font-size: 25px;
+    right: 14px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 50%;
+    padding: 0.2rem;
+    color: inherit;
+}
+
+.download:hover {
+    color: var(--red);
+    transition: color 0.2s ease-in-out;
+}
+
+.menuTrack {
+    background-color: var(--white);
+    position: relative;
+    display: block;
+    position: absolute;
+    right: -10px;
+    background-color: var(--white);
+    border: none;
+    border-radius: 15px;
+    padding: 0.4rem;
+    color: inherit;
 }
 
 .toast {
@@ -182,4 +211,9 @@ section:hover {
 
 .toast.active {
     transform: translateX(0%);
+}
+
+.topbar {
+    display: grid;
+    grid-template-columns: auto auto;
 }

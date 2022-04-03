@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/bar.css">
+    <link rel="stylesheet" href="css/search.css">
 
     <script src="https://kit.fontawesome.com/58ce18537a.js" crossorigin="anonymous"></script>
 </head>
@@ -40,7 +41,10 @@
                 </form>
             </div>
         </div>
-        <div class="bop"><span class="openbtn" onclick="openNav()">Take Notes</span></div>
+        <div class="topbar">
+            <div class="bop"><span class="openbtn" onclick="openNav()">Take Notes</span></div>
+            <input type="text" class="form-control" id="search-bar" placeholder="Search Notes" />
+        </div>
         <div class="grid">
         </div>
 
@@ -49,6 +53,8 @@
 
 
     <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/download.js"></script>
     <script src="js/bar.js"></script>
     <script src="js/check.js"></script>
 </body>
